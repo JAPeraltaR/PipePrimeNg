@@ -1,0 +1,60 @@
+<p-panel [showHeader]="true" header="Pipes Básicos" class="p-2">
+  <p>Pipes incluidos en Angular - Usualmente en el Common Module</p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="UpperCase">
+     Original: {{ nameUpper }},
+     Convert:  {{ nameUpper | uppercase }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="LowerCase">
+      Original: {{ nameLower }},
+      Convert:  {{ nameLower | uppercase }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="TitleCase">
+      Original: {{ nameTitle }},
+      Convert:  {{ nameTitle | uppercase }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-card header="With Format">
+      <ul>
+        <li>Original Date: {{ customDate }}</li>
+        <li>Convert date: {{ customDate | date }}</li>
+        <li>Convert short: {{ customDate | date: 'short' }}</li>
+        <li>Convert long: {{ customDate | date: 'long' }}</li>
+        <li>Convert Month: {{ customDate | date: 'MMMM' }}</li>
+        <li>Convert Custom: {{ customDate | date: 'MMMM dd, yyyy' }}</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-card header="With TimeZone">
+      <ul>
+        <li>Original Date: {{ customDate }}</li>
+        <li>Convert date: {{ customDate | date: 'long':'GMT-6'}}</li>
+        <li>Convert long: {{ customDate | date: 'long':'GMT-4' }}</li>
+        <li>Convert long: {{ customDate | date: 'long':'GMT-5' }}</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-card header="With Locale">
+      <ul>
+        <li>Original Date: {{ customDate }}</li>
+        <li>Convert date: {{ customDate | date: 'long':'GMT-6':''}}</li>
+        <li>Convert date: {{ customDate | date: 'long':'GMT-6':'es-PE'}}</li>
+        <li>Convert long: {{ customDate | date: 'long':'GMT-4':'en-US' }}</li>
+        <li>Convert long: {{ customDate | date: 'long':'GMT-4':'en-GB' }}</li>
+        <li>Convert long: {{ customDate | date: 'long':'GMT-5':'fr-CA' }}</li>
+      </ul>
+    </p-card>
+  </div>
+
+</div>

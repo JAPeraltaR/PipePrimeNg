@@ -4,7 +4,7 @@ import { providePrimeNG } from 'primeng/config';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import Aura from '@primeng/themes/lara';
+import { MyPreset } from './mytheme';
 
 
 export const appConfig: ApplicationConfig = {
@@ -14,12 +14,7 @@ export const appConfig: ApplicationConfig = {
         provideAnimationsAsync(),
         providePrimeNG({
             theme: {
-                preset: Aura,
-                options: {
-                  prefix: 'p',
-                  darkModeSelector: 'system',
-                  cssLayer: false
-              }
+                preset: MyPreset
             },
             ripple: true
         })
