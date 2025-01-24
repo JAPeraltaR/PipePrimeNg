@@ -4,6 +4,9 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { FieldsetModule } from 'primeng/fieldset';
 import { PanelModule } from 'primeng/panel';
+import { ToolbarModule } from 'primeng/toolbar'
+import { AvatarModule } from 'primeng/avatar'
+import { TableModule } from 'primeng/table'
 
 //configuracion de Locale del App
 import localeEsPe from '@angular/common/locales/es-PE'
@@ -19,18 +22,24 @@ registerLocaleData(localeFrCa);
 
 @NgModule({
   imports: [
+    AvatarModule,
     ButtonModule,
     CommonModule,
     CardModule,
     FieldsetModule,
-    PanelModule
+    PanelModule,
+    TableModule,
+    ToolbarModule
   ],
   exports: [
+    AvatarModule,
     ButtonModule,
     CommonModule,
     CardModule,
     FieldsetModule,
-    PanelModule
+    PanelModule,
+    TableModule,
+    ToolbarModule
   ]
 })
 export class PrimeNgModule { }
