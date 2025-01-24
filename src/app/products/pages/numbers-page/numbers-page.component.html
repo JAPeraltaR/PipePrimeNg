@@ -2,18 +2,20 @@
   <p>Pipes incluidos en Angular - Usualmente en el Common Module</p>
 </p-panel>
 
-<div class="p-grid">
-  <div class="col-12 md:col-3">
+<div class="grid">
+  <div class="col-12 md:col-4">
     <p-card header="Ventas Netas (Number)" subheader="del presente año">
      Original: "{{ totalSells }}",
      Convert:  {{ totalSells | number: '1.2-2' }}
     </p-card>
-
+  </div>
+  <div class="col-12 md:col-4">
     <p-card header="Ventas Brutas (Currency)" subheader="del presente año">
       Original: {{ totalSells }},
       Convert:  {{ totalSells | currency:'USD':'symbol-narrow':'1.6-4' }}
      </p-card>
-
+  </div>
+  <div class="col-12 md:col-4">
     <p-card header="Ganacias porcentuales (Percent)" subheader="del presente año">
       Original: {{ percent }},
       Convert:  {{ percent | percent: '1.2-2' }}
